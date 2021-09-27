@@ -40,8 +40,7 @@ class HomePageState extends State<HomePage>{
                 children: [
                 Padding(
                   padding: const EdgeInsets.only(
-                  top: 29.0,
-                  bottom: 513.0,  //Original é 516, porém estava erro de Render
+                  top: 29.0, 
                   left: 118.0,
                   right: 90.0
                 ),
@@ -71,6 +70,40 @@ class HomePageState extends State<HomePage>{
                 )
                 )
               ],),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                  top: 78.0, 
+                  left: 31.0,
+                  right: 185.0
+                ),
+                child: RichText(
+                  text: TextSpan(
+                    text: "Promoção",
+                    style: TextStyle(
+                      color: Color(0xFF333333),
+                      fontSize: 22.0,
+                      fontFamily: "Roboto",
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.w900
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "  Semanal",
+                        style: TextStyle(
+                          color: Color(0xFFFF9B0D),
+                          fontSize: 22.0,
+                          fontFamily: "Roboto",
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w900
+                    )
+                  )]
+                ),
+                )
+                )],
+            ), 
             ],),
         ),
             
