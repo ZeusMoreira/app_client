@@ -18,7 +18,32 @@ class _MyAppState extends State<MyApp>{
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Color(0xFFFF9B0D),
-        body: Design()
+        body: Design(),
+        bottomNavigationBar: SizedBox(
+          height: 70.0,
+          child: BottomNavigationBar(
+            unselectedItemColor: Colors.grey,
+            selectedItemColor: Color(0xFFFFFFFF),
+            iconSize: 30.0,
+            elevation: 0.0,
+            backgroundColor: Color(0xFFFF9B0D),
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home,
+                  color: Color(0xFFFFFFFF),
+                  ),
+                  label: "Home"
+                  ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.info_sharp,
+                  color: Color(0xFFFFFFFF),
+                  ),
+                  label: "Sobre Nós"
+                  )
+            ],),
+        ),
       )
       );
   }

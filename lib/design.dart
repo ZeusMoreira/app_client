@@ -79,11 +79,12 @@ class _DesignState extends State<Design> {
               height: 98.0,
               width: 112.0,
             ),
-          )
-            
+          ),
+        
           
       ],
     );
+
         
   }
 }
