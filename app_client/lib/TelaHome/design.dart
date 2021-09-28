@@ -1,13 +1,13 @@
 
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:app_client/Promo%C3%A7%C3%B5es/promo1.dart';
-import 'package:app_client/Promo%C3%A7%C3%B5es/promo2.dart';
+import 'package:app_client/TelaHome/Promoções/promo1.dart';
+import 'package:app_client/TelaHome/Promoções/promo2.dart';
 import 'package:app_client/assets/pb_icons.dart';
-import 'package:app_client/cardapio.dart';
-import 'package:app_client/contato.dart';
-import 'package:app_client/logo.dart';
-import 'package:app_client/promotext.dart';
+import 'package:app_client/TelaHome/cardapio.dart';
+import 'package:app_client/TelaHome/contato.dart';
+import 'package:app_client/TelaHome/logo.dart';
+import 'package:app_client/TelaHome/promotext.dart';
 import 'package:flutter/material.dart';
 
 class Design extends StatefulWidget {
