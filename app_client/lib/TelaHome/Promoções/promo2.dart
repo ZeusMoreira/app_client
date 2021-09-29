@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:app_client/TelaPatoFrango/descricaofrango.dart';
 import 'package:flutter/material.dart';
 
 class PromoDois extends StatefulWidget {
@@ -37,7 +38,10 @@ class _PromoDoisState extends State<PromoDois> {
                       primary: Color(0xFFFFFFFF),
                       onPrimary: Color(0xFF434343),
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => BackgroundFrango()),
+                                  );},
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -58,7 +62,7 @@ class _PromoDoisState extends State<PromoDois> {
                       ),
                       RichText(
                         text: TextSpan(
-                        text: "20%",
+                        text: "15%",
                         style: TextStyle(
                           color: Color(0xFF434343),
                           fontWeight: FontWeight.w900,
@@ -87,7 +91,7 @@ class _PromoDoisState extends State<PromoDois> {
                         ),
                         children: [
                           TextSpan(
-                            text: "0,00",
+                            text: "12,75",
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,
@@ -104,7 +108,7 @@ class _PromoDoisState extends State<PromoDois> {
                             )
                           ),
                           TextSpan(
-                            text: "0,00",
+                            text: "15,00",
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,

@@ -1,17 +1,19 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
 import 'package:app_client/TelaHome/descricaobacon.dart';
-import 'package:app_client/TelaPatoBacon/design.dart';
+import 'package:app_client/TelaPatoFrango/design2.dart';
 import 'package:flutter/material.dart';
 
-class Background extends StatefulWidget {
+class BackgroundFrango extends StatefulWidget {
 
+
+  
 
   @override
-  _BackgroundState createState() => _BackgroundState();
+  _BackgroundFrangoState createState() => _BackgroundFrangoState();
 }
 
-class _BackgroundState extends State<Background> {
+class _BackgroundFrangoState extends State<BackgroundFrango> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

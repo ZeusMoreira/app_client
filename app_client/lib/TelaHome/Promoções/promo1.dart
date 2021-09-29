@@ -39,8 +39,9 @@ class _PromoUmState extends State<PromoUm> {
                       onPrimary: Color(0xFF434343),
                     ),
                     onPressed: (){Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Background()));},
+                        context,
+                        MaterialPageRoute(builder: (context) => Background()),
+                        );},
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -89,7 +90,7 @@ class _PromoUmState extends State<PromoUm> {
                         ),
                         children: [
                           TextSpan(
-                            text: "0,00",
+                            text: "16,00",
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,
@@ -106,7 +107,7 @@ class _PromoUmState extends State<PromoUm> {
                             )
                           ),
                           TextSpan(
-                            text: "0,00",
+                            text: "20,00",
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,

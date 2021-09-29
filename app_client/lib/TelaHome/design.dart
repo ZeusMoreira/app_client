@@ -61,7 +61,7 @@ class _DesignState extends State<Design> {
           Positioned(
             top: 131.0,
             right: 0.0,
-            left: 100.0,
+            left: 130.0,
             bottom: 333.0,
             child: Image.asset(
               "assets/images/pato-bacon_solo.png",
@@ -72,7 +72,7 @@ class _DesignState extends State<Design> {
           Positioned(
             top: 253.0,
             right: 0.0,
-            left: 100.0,
+            left: 130.0,
             bottom: 211.0,
             child: Image.asset(
               "assets/images/pato-frango.png",

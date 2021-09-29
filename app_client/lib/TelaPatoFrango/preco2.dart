@@ -29,7 +29,7 @@ class _PrecoState extends State<Preco> {
                             ),
                             children: [
                               TextSpan(
-                                text: " 20,00",
+                                text: " 15,00",
                                 style: TextStyle(
                                   decoration: TextDecoration.lineThrough,
                                   decorationColor: Colors.red,
@@ -49,7 +49,7 @@ class _PrecoState extends State<Preco> {
                                 )
                               ),
                               TextSpan(
-                                text: " 16,00",
+                                text: " 12,75",
                                 style: TextStyle(
                                   color: Color(0xFF434343),
                                   fontSize: 30,
