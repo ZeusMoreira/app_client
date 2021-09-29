@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:app_client/TelaPatoBacon/myapp.dart';
 import 'package:flutter/material.dart';
 
 class PromoUm extends StatefulWidget {
@@ -37,7 +38,9 @@ class _PromoUmState extends State<PromoUm> {
                       primary: Color(0xFFFFFFFF),
                       onPrimary: Color(0xFF434343),
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Background()));},
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
