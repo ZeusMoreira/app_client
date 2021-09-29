@@ -29,7 +29,7 @@ class _PrecoState extends State<Preco> {
                             ),
                             children: [
                               TextSpan(
-                                text: " 0,00",
+                                text: " 20,00",
                                 style: TextStyle(
                                   color: Color(0xFF434343),
                                   fontSize: 30,

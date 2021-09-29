@@ -10,7 +10,7 @@ class _ImagemState extends State<Imagem> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-            top: 89,
+            bottom: 275.5,
             left: 40,
             right: 54.0,
             child: Container(

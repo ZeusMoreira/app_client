@@ -34,7 +34,7 @@ class _DesignState extends State<Design> {
                     topLeft: Radius.circular(20.0)
                   )
                 ),
-                height: 381.46,
+                height: (MediaQuery.of(context).size.height)/1.7,
                 width: 360.0,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

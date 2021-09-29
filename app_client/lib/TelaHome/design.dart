@@ -32,8 +32,8 @@ class _DesignState extends State<Design> {
                   bottomLeft: Radius.circular(20.0)
                 )
               ),
-              height: 572.0,
-              width: 360.0,
+              height: (MediaQuery.of(context).size.height)/1.12,
+              width: double.infinity,
               
               child: SingleChildScrollView(
                 child: Column(
