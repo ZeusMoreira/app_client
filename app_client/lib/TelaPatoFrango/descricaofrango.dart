@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
-import 'package:app_client/TelaHome/descricaobacon.dart';
+import 'package:app_client/TelaHome/myapp.dart';
 import 'package:app_client/TelaPatoFrango/design2.dart';
 import 'package:flutter/material.dart';
 
