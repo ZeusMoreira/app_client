@@ -14,16 +14,16 @@ class _PrecoState extends State<Preco> {
     return Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(
-                            top: 8.0,
-                            left: 25.0,
+                          padding: EdgeInsets.only(
+                            top: (MediaQuery.of(context).size.height)*0.0125,
+                            left: (MediaQuery.of(context).size.width)*0.0694,
                           ),
                           child: RichText(
                             text: TextSpan(
                               text: "R\$",
                                 style: TextStyle(
                                 color: Color(0xFFFF9B0D),
-                                fontSize: 12.0,
+                                fontSize: (MediaQuery.of(context).size.height)*0.01875,
                                 fontWeight: FontWeight.w700,
                                 fontStyle: FontStyle.normal
                             ),
@@ -34,7 +34,7 @@ class _PrecoState extends State<Preco> {
                                   decoration: TextDecoration.lineThrough,
                                   decorationColor: Colors.red,
                                   color: Color(0xFF434343),
-                                  fontSize: 20,
+                                  fontSize: (MediaQuery.of(context).size.height)*0.03125,
                                   fontWeight: FontWeight.w700,
                                   fontStyle: FontStyle.normal
                                 )
@@ -43,7 +43,7 @@ class _PrecoState extends State<Preco> {
                                 text: "   R\$",
                                 style: TextStyle(
                                   color: Color(0xFFFF9B0D),
-                                  fontSize: 20,
+                                  fontSize: (MediaQuery.of(context).size.height)*0.03125,
                                   fontWeight: FontWeight.w900,
                                   fontStyle: FontStyle.normal
                                 )
@@ -52,7 +52,7 @@ class _PrecoState extends State<Preco> {
                                 text: " 16,00",
                                 style: TextStyle(
                                   color: Color(0xFF434343),
-                                  fontSize: 30,
+                                  fontSize: (MediaQuery.of(context).size.height)*0.046875,
                                   fontWeight: FontWeight.w900,
                                   fontStyle: FontStyle.normal
                               )

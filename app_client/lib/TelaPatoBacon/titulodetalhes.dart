@@ -15,15 +15,15 @@ class _TituloDetalhesState extends State<TituloDetalhes> {
     return Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(
-                            top: 8.0,
-                            left: 25.0,
+                          padding: EdgeInsets.only(
+                            top: (MediaQuery.of(context).size.height)*0.0125,
+                            left: (MediaQuery.of(context).size.width)*0.0694,
                           ),
                           child: Text(
                             "Detalhes",
                             style: TextStyle(
                               color: Color(0xFF434343),
-                              fontSize: 18.0,
+                              fontSize: (MediaQuery.of(context).size.height)*0.028125,
                               fontWeight: FontWeight.w900,
                               fontStyle: FontStyle.normal
                             )

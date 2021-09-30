@@ -34,7 +34,7 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
           title: Text(
             "Promoção",
             style: new TextStyle(
-                fontSize: 24.0,
+                fontSize: MediaQuery.of(context).size.height * 0.0375,
                 fontFamily: "Roboto",
                 fontStyle: FontStyle.normal,
                 color: Color(0xFFFFFFFF),

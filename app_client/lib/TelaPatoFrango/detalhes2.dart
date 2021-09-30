@@ -14,21 +14,21 @@ class _DetalhesState extends State<Detalhes> {
     return Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(
-                            top: 8.0,
-                            left: 25.0,
-                            right: 25.0
+                          padding: EdgeInsets.only(
+                            top: (MediaQuery.of(context).size.height)*0.0125,
+                            left: (MediaQuery.of(context).size.width)*0.0694,
+                            right: (MediaQuery.of(context).size.width)*0.0694
                           ),
                           child: Column(
                             children: [
                                 Container(
-                                  height: 50,
-                                  width: 308,
+                                  height:  (MediaQuery.of(context).size.height)*0.078125,
+                                  width: (MediaQuery.of(context).size.width)*0.8555,
                                   child: Text(
                                     "Perguntar ao cliente o que colocar nos detalhes",
                                     style: TextStyle(
                                       color: Color.fromRGBO(67, 67, 67, 0.6),
-                                      fontSize: 14.0,
+                                      fontSize: (MediaQuery.of(context).size.height)*0.021875,
                                       fontWeight: FontWeight.w500,
                                       fontStyle: FontStyle.normal
                                     )

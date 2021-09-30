@@ -13,8 +13,8 @@ class _NomeLancheState extends State<NomeLanche> {
   Widget build(BuildContext context) {
     return Padding(
                       padding: EdgeInsets.only(
-                        left: 25.0,
-                        top: 106.46,
+                        left: (MediaQuery.of(context).size.width)*0.06944,
+                        top: (MediaQuery.of(context).size.height)*0.1663,
                       ),
                       child: Row(
                         children: [
@@ -22,7 +22,7 @@ class _NomeLancheState extends State<NomeLanche> {
                             "X-Pato Bacon",
                             style: TextStyle(
                               color: Color(0xFF434343),
-                              fontSize: 24.0,
+                              fontSize: (MediaQuery.of(context).size.height)*0.0375,
                               fontWeight: FontWeight.w700,
                               fontStyle: FontStyle.normal
                             ),

@@ -20,38 +20,39 @@ class _MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Color(0xFFFF9B0D),
-        body: screens[_currentIndex],
-        bottomNavigationBar: BottomNavigationBar(
-              unselectedItemColor: Color(0xFFDCDCDC),
-              selectedItemColor: Color(0xFFFFFFFF),
-              iconSize: 30.0,
-              elevation: 0.0,
-              backgroundColor: Color(0xFFFF9B0D),
-              currentIndex: _currentIndex,
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home,                    ),
-                    label: "Home"
-                    ),
-                BottomNavigationBarItem(
-           
-                  icon: Icon(
-                    Icons.info_sharp,                    ),
-                    label: "Sobre Nós"
-                    )
-              ],
-              onTap: (index) {
-                setState(() {
-                  _currentIndex = index;
-                });
-              }
-              ),
-      ),
-      
-      );
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          backgroundColor: Color(0xFFFF9B0D),
+          body: screens[_currentIndex],
+          bottomNavigationBar: BottomNavigationBar(
+                unselectedItemColor: Color(0xFFDCDCDC),
+                selectedItemColor: Color(0xFFFFFFFF),
+                iconSize: 40.0,
+                elevation: 0.0,
+                backgroundColor: Color(0xFFFF9B0D),
+                currentIndex: _currentIndex,
+                items: [
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.home,                    ),
+                      label: "Home"
+                      ),
+                  BottomNavigationBarItem(
+             
+                    icon: Icon(
+                      Icons.info_sharp,                    ),
+                      label: "Sobre Nós"
+                      )
+                ],
+                onTap: (index) {
+                  setState(() {
+                    _currentIndex = index;
+                  });
+                }
+                ),
+        ),
+        
+        
+    );
   }
 }
