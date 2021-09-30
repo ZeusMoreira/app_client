@@ -32,7 +32,7 @@ class _DesignState extends State<Design> {
                   bottomLeft: Radius.circular(20.0)
                 )
               ),
-              height: (MediaQuery.of(context).size.height)/1.12,
+              height: (MediaQuery.of(context).size.height)/1.10,
               width: double.infinity,
               
               child: SingleChildScrollView(
@@ -43,41 +43,45 @@ class _DesignState extends State<Design> {
                   PromoUm(),
                   PromoDois(),
                   Padding(
-                    padding: const EdgeInsets.only(
-                      top: 34.0,
-                      bottom: 39.0,
+                    padding: EdgeInsets.only(
+                      top: (MediaQuery.of(context).size.height)*0.053125,
+                      bottom: (MediaQuery.of(context).size.height)*0.069375,
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Cardapio(),
-                        Contato(),
-                      ],
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        top: (MediaQuery.of(context).size.height)*0.01,
+                        left: MediaQuery.of(context).size.width*0.07,
+                        right: MediaQuery.of(context).size.width*0.07
+
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Cardapio(),
+                          Contato(),
+                        ],
+                      ),
                     ),
                   )
                   ],),
               ),
             ),
           Positioned(
-            top: 131.0,
-            right: 0.0,
-            left: 130.0,
-            bottom: 333.0,
+            top: (MediaQuery.of(context).size.height)*0.2046,
+            left: (MediaQuery.of(context).size.width)*0.4565,
             child: Image.asset(
               "assets/images/pato-bacon_solo.png",
-              height: 108.0,
-              width: 122.0,
+              height: MediaQuery.of(context).size.height*0.18,
+              width: MediaQuery.of(context).size.width*0.39,
             ),
           ),
           Positioned(
-            top: 253.0,
-            right: 0.0,
-            left: 130.0,
-            bottom: 211.0,
+            top:  MediaQuery.of(context).size.height*0.3953,
+            left: (MediaQuery.of(context).size.width)*0.4365,
             child: Image.asset(
               "assets/images/pato-frango.png",
-              height: 98.0,
-              width: 112.0,
+              height: MediaQuery.of(context).size.height*0.23,
+              width: MediaQuery.of(context).size.width*0.55,
             ),
           ),
         

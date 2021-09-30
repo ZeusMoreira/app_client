@@ -14,9 +14,9 @@ class _PromoDoisState extends State<PromoDois> {
   Widget build(BuildContext context) {
     return Padding(
                 padding: EdgeInsets.only(
-                  top: 40.29,
-                  right: 125.72,
-                  left: 36.0
+                  top: MediaQuery.of(context).size.height*0.0629,
+                  left: MediaQuery.of(context).size.width*0.10,
+                  right: MediaQuery.of(context).size.width*0.34
                 ),
                 child: Container(
                   decoration: BoxDecoration(
@@ -28,8 +28,8 @@ class _PromoDoisState extends State<PromoDois> {
                       offset: Offset(0,4)
                     )]
                   ),
-                  height: 86.0,
-                  width: 197.54,
+                  height: (MediaQuery.of(context).size.height)*0.1503,
+                  width: (MediaQuery.of(context).size.width)/1.5487,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -47,9 +47,9 @@ class _PromoDoisState extends State<PromoDois> {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(
-                            top: 19.0,
-                            left: 55.0,
-                            right: 85.28
+                            top: (MediaQuery.of(context).size.height)*0.029,
+                            right: (MediaQuery.of(context).size.width)*0.48,
+                            bottom: (MediaQuery.of(context).size.height)*0.01
                           )
                         ),
                       Text(
@@ -57,7 +57,7 @@ class _PromoDoisState extends State<PromoDois> {
                         style: TextStyle(
                           color: Color(0xFF434343),
                           fontWeight: FontWeight.bold,
-                          fontSize: 12.0,
+                          fontSize: (MediaQuery.of(context).size.height)*0.01875,
                         ),
                       ),
                       RichText(
@@ -66,7 +66,7 @@ class _PromoDoisState extends State<PromoDois> {
                         style: TextStyle(
                           color: Color(0xFF434343),
                           fontWeight: FontWeight.w900,
-                          fontSize: 12.0,
+                          fontSize: (MediaQuery.of(context).size.height)*0.01875,
                         ),
                         children: [
                           TextSpan(
@@ -74,7 +74,7 @@ class _PromoDoisState extends State<PromoDois> {
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w500,
-                              fontSize: 12.0,
+                              fontSize: (MediaQuery.of(context).size.height)*0.01875,
                             )
                           )
                         ]
@@ -87,7 +87,7 @@ class _PromoDoisState extends State<PromoDois> {
                         style: TextStyle(
                           color: Color(0xFF434343),
                           fontWeight: FontWeight.w700,
-                          fontSize: 10.0,
+                          fontSize: (MediaQuery.of(context).size.height)*0.015625,
                         ),
                         children: [
                           TextSpan(
@@ -95,7 +95,7 @@ class _PromoDoisState extends State<PromoDois> {
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,
-                              fontSize: 20.0,
+                              fontSize: (MediaQuery.of(context).size.height)*0.03125,
                             )
                           ),
                           TextSpan(
@@ -103,7 +103,7 @@ class _PromoDoisState extends State<PromoDois> {
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,
-                              fontSize: 8.0,
+                              fontSize: (MediaQuery.of(context).size.height)*0.0125,
                             
                             )
                           ),
@@ -112,7 +112,7 @@ class _PromoDoisState extends State<PromoDois> {
                             style: TextStyle(
                               color: Color(0xFF434343),
                               fontWeight: FontWeight.w700,
-                              fontSize: 15.0,
+                              fontSize: (MediaQuery.of(context).size.height)*0.0234375,
                               decoration: TextDecoration.lineThrough,
                               decorationColor: Color(0xFFFB1818)
                           ),

@@ -9,10 +9,11 @@ class PromoText extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                    top: 22.0, 
-                    left: 31.0,
-                    right: 185.0
+                    padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.width*0.1218, 
+                    right: MediaQuery.of(context).size.width*0.5027,
+                    left: MediaQuery.of(context).size.width*0.0842
+
                   ),
                   child: RichText(
                     text: TextSpan(

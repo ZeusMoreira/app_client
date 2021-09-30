@@ -21,8 +21,8 @@ class _CardapioState extends State<Cardapio> {
                           offset: Offset(0,4)
                         )]
                       ),
-                      height: 138.0,
-                      width: 126.0,
+                      height: (MediaQuery.of(context).size.height)*0.2156,
+                      width: (MediaQuery.of(context).size.width)*0.35,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -38,13 +38,13 @@ class _CardapioState extends State<Cardapio> {
                             Icon(
                               PatoBurguerIcons.hamburguer_icon,
                               color: Color(0xFFFF9B0D),
-                              size: 75.0
+                              size: (MediaQuery.of(context).size.height)*0.1171,
                             ),
                             Text(
                               "Cardápio",
                               style: TextStyle(
                                 color: Color(0xFFFF9B0D),
-                                fontSize: 20.0,
+                                fontSize: (MediaQuery.of(context).size.height)*0.03125,
                                 fontWeight: FontWeight.w500,
                                 fontStyle: FontStyle.normal,
                                 fontFamily: "Roboto"

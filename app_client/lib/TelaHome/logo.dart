@@ -10,10 +10,9 @@ class Logo extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                    top: 29.0, 
-                    left: 118.0,
-                    right: 90.0
+                    padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height*0.05, 
+                  
                   ),
                   child: RichText(
                     text: TextSpan(

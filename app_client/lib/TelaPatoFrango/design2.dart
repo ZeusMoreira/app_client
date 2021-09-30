@@ -35,7 +35,7 @@ class _DesignState extends State<Design> {
                   )
                 ),
                 height: (MediaQuery.of(context).size.height)/1.7,
-                width: 360.0,
+                width: (MediaQuery.of(context).size.width),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

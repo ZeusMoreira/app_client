@@ -24,8 +24,8 @@ class _DesignSobreState extends State<DesignSobre> {
                   bottomLeft: Radius.circular(20.0)
                 )
               ),
-              height: (MediaQuery.of(context).size.height)/1.12,
-              width: 360.0,
+              height: (MediaQuery.of(context).size.height)/1.10,
+              width: double.infinity
                 
                   
                   ),
