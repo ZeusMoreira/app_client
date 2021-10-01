@@ -11,7 +11,7 @@ class PromoText extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.width*0.1218, 
-                    right: MediaQuery.of(context).size.width*0.5027,
+                    right: MediaQuery.of(context).size.width*0.5138,
                     left: MediaQuery.of(context).size.width*0.0842
 
                   ),
@@ -20,7 +20,7 @@ class PromoText extends StatelessWidget {
                       text: "Promoção",
                       style: TextStyle(
                         color: Color(0xFF333333),
-                        fontSize: 22.0,
+                        fontSize: (MediaQuery.of(context).size.height)*0.034375,
                         fontFamily: "Roboto",
                         fontStyle: FontStyle.normal,
                         fontWeight: FontWeight.w900
@@ -30,7 +30,7 @@ class PromoText extends StatelessWidget {
                           text: "  Semanal",
                           style: TextStyle(
                             color: Color(0xFFFF9B0D),
-                            fontSize: 22.0,
+                            fontSize: (MediaQuery.of(context).size.height)*0.034375,
                             fontFamily: "Roboto",
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w900

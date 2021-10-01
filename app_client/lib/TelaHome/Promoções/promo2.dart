@@ -14,7 +14,7 @@ class _PromoDoisState extends State<PromoDois> {
   Widget build(BuildContext context) {
     return Padding(
                 padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height*0.0629,
+                  top: MediaQuery.of(context).size.height*0.0529,
                   left: MediaQuery.of(context).size.width*0.10,
                   right: MediaQuery.of(context).size.width*0.34
                 ),

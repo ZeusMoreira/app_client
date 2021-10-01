@@ -18,7 +18,7 @@ class Logo extends StatelessWidget {
                     text: TextSpan(
                       text: "Pato",
                       style: TextStyle(
-                        fontSize: 24.0,
+                        fontSize: (MediaQuery.of(context).size.height)*0.0375,
                         color: Color(0xFF333333),
                         fontFamily: "Roboto",
                         fontStyle: FontStyle.normal,
@@ -28,7 +28,7 @@ class Logo extends StatelessWidget {
                       TextSpan(
                         text: " Burguer",
                         style: TextStyle(
-                          fontSize: 24.0,
+                          fontSize: (MediaQuery.of(context).size.height)*0.0375,
                           color: Color(0xFFFF9B0D),
                           fontFamily: "Roboto",
                           fontStyle: FontStyle.normal,

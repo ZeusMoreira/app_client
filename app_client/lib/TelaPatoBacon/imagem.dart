@@ -10,13 +10,14 @@ class _ImagemState extends State<Imagem> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-            right: (MediaQuery.of(context).size.width)*0.01,
-            left: (MediaQuery.of(context).size.width)*0.01,
-            top: (MediaQuery.of(context).size.height)*0.053125,
+            right: (MediaQuery.of(context).size.width)*0.1305,
+            left: (MediaQuery.of(context).size.width)*0.1305,
+            top: (MediaQuery.of(context).size.height)*0.073125,
               child: 
                   Image.asset(
                   "assets/images/pato-bacon_solo.png",
-                  height: (MediaQuery.of(context).size.height)*0.4304,
+                  fit: BoxFit.fill,
+                  height: (MediaQuery.of(context).size.height)*0.3504,
                   width: (MediaQuery.of(context).size.width)*0.7388,
                   
                   

@@ -49,7 +49,7 @@ class _DesignState extends State<Design> {
                     ),
                     child: Padding(
                       padding: EdgeInsets.only(
-                        top: (MediaQuery.of(context).size.height)*0.01,
+                        top: (MediaQuery.of(context).size.height)*0.004,
                         left: MediaQuery.of(context).size.width*0.07,
                         right: MediaQuery.of(context).size.width*0.07
 
@@ -67,7 +67,7 @@ class _DesignState extends State<Design> {
               ),
             ),
           Positioned(
-            top: (MediaQuery.of(context).size.height)*0.2046,
+            top: (MediaQuery.of(context).size.height)*0.2346,
             left: (MediaQuery.of(context).size.width)*0.4565,
             child: Image.asset(
               "assets/images/pato-bacon_solo.png",
@@ -76,7 +76,7 @@ class _DesignState extends State<Design> {
             ),
           ),
           Positioned(
-            top:  MediaQuery.of(context).size.height*0.3953,
+            top:  MediaQuery.of(context).size.height*0.4153,
             left: (MediaQuery.of(context).size.width)*0.4365,
             child: Image.asset(
               "assets/images/pato-frango.png",
