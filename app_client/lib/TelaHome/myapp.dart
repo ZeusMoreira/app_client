@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp>{
           bottomNavigationBar: BottomNavigationBar(
                 unselectedItemColor: Color(0xFFDCDCDC),
                 selectedItemColor: Color(0xFFFFFFFF),
-                iconSize: 40.0,
+                iconSize: 40,
                 elevation: 0.0,
                 backgroundColor: Color(0xFFFF9B0D),
                 currentIndex: _currentIndex,

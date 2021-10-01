@@ -1,5 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:app_client/TelaSobre/imagemPato.dart';
+import 'package:app_client/TelaSobre/slogan.dart';
+import 'package:app_client/TelaSobre/texto.dart';
+import 'package:app_client/TelaSobre/titlehistoria.dart';
 import 'package:flutter/material.dart';
 
 class DesignSobre extends StatefulWidget {
@@ -25,11 +29,16 @@ class _DesignSobreState extends State<DesignSobre> {
                 )
               ),
               height: (MediaQuery.of(context).size.height)/1.10,
-              width: double.infinity
-                
-                  
-                  ),
-              
+              width: double.infinity,
+              child: Column(
+                children: [
+                  TituloHistoria(),
+                    TextoHistoria(),
+                    SloganPato()  
+                ],
+              )
+          ),
+          ImagemPato()    
               
       ]
     );

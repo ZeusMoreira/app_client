@@ -61,6 +61,8 @@ flutter:
   assets:
     - assets/images/pato-frango.png
     - assets/images/pato-bacon_solo.png
+    - assets/images/logo-patoburguer.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
