@@ -26,6 +26,7 @@ class _DetalhesState extends State<Detalhes> {
                                   width: (MediaQuery.of(context).size.width)*0.8555,
                                   child: Text(
                                     "Perguntar ao cliente o que colocar nos detalhes",
+                                    textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       color: Color.fromRGBO(67, 67, 67, 0.6),
                                       fontSize: (MediaQuery.of(context).size.height)*0.021875,

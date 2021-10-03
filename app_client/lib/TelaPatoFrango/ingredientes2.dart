@@ -26,6 +26,7 @@ class _IngredientesState extends State<Ingredientes> {
                                   width: (MediaQuery.of(context).size.width)*0.8555,
                                   child: Text(
                                     "Pão de milho, alface, tomate e filé de frango",
+                                    textAlign: TextAlign.justify,
                                     style: TextStyle(
                                       color: Color.fromRGBO(67, 67, 67, 0.6),
                                       fontSize: (MediaQuery.of(context).size.height)*0.021875,
