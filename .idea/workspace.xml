@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21cb8004-9497-494a-a29e-9aeea99c53d0" name="Default Changelist" comment="" />
+    <list default="true" id="21cb8004-9497-494a-a29e-9aeea99c53d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_client/lib/TelaHome/contatodesign.dart" beforeDir="false" afterPath="$PROJECT_DIR$/app_client/lib/TelaHome/contatodesign.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_client/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app_client/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_client/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app_client/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

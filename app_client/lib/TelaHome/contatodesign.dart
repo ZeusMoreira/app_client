@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:app_client/TelaHome/contatoinfo.dart';
 import 'package:flutter/material.dart';
 
 class ContatoDesign extends StatefulWidget {
@@ -11,8 +14,8 @@ class _ContatoDesignState extends State<ContatoDesign> {
     return Stack(
       children: [
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
+          //crossAxisAlignment: CrossAxisAlignment.center,
+          //mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
@@ -26,6 +29,10 @@ class _ContatoDesignState extends State<ContatoDesign> {
                       topLeft: Radius.circular(20.0))),
               height: (MediaQuery.of(context).size.height) / 1.2,
               width: double.infinity,
+              child: Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  child: ContatoInfo()),
             ),
           ],
         ),
