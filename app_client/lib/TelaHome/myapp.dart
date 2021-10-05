@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:app_client/TelaHome/design.dart';
 import 'package:app_client/TelaSobre/sobre.dart';
+import 'package:app_client/assets/pb_icons.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatefulWidget{
@@ -15,7 +16,9 @@ class _MyAppState extends State<MyApp>{
 
   final screens = [
     Design(),
-    Sobre()
+    Sobre(),
+    Design(),
+    Design()
   ];
   @override
   Widget build(BuildContext context) {
@@ -25,6 +28,7 @@ class _MyAppState extends State<MyApp>{
           backgroundColor: Color(0xFFFF9B0D),
           body: screens[_currentIndex],
           bottomNavigationBar: BottomNavigationBar(
+                type: BottomNavigationBarType.fixed,
                 unselectedItemColor: Color(0xFFDCDCDC),
                 selectedItemColor: Color(0xFFFFFFFF),
                 iconSize: 40,
@@ -38,11 +42,26 @@ class _MyAppState extends State<MyApp>{
                       label: "Home"
                       ),
                   BottomNavigationBarItem(
-             
                     icon: Icon(
-                      Icons.info_sharp,                    ),
-                      label: "Sobre Nós"
-                      )
+                      PatoBurguerIcons.hamburguer_icon,                    ),
+                      label: "Lanches"
+                      ),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.local_drink     ,               ),
+                      label: "Bebidas"
+                      ),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.list,                  ),
+                      label: "Combos"
+                      ),
+                  // BottomNavigationBarItem(
+             
+                  //   icon: Icon(
+                  //     Icons.info_sharp,                    ),
+                  //     label: "Sobre Nós"
+                  //     )
                 ],
                 onTap: (index) {
                   setState(() {
