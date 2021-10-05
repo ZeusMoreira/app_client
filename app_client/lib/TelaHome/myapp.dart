@@ -17,8 +17,6 @@ class _MyAppState extends State<MyApp>{
   final screens = [
     Design(),
     Sobre(),
-    Design(),
-    Design()
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,27 +39,13 @@ class _MyAppState extends State<MyApp>{
                       Icons.home,                    ),
                       label: "Home"
                       ),
+                  
                   BottomNavigationBarItem(
-                    icon: Icon(
-                      PatoBurguerIcons.hamburguer_icon,                    ),
-                      label: "Lanches"
-                      ),
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.local_drink     ,               ),
-                      label: "Bebidas"
-                      ),
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.list,                  ),
-                      label: "Combos"
-                      ),
-                  // BottomNavigationBarItem(
              
-                  //   icon: Icon(
-                  //     Icons.info_sharp,                    ),
-                  //     label: "Sobre Nós"
-                  //     )
+                    icon: Icon(
+                      Icons.info_sharp,                    ),
+                      label: "Sobre Nós"
+                      )
                 ],
                 onTap: (index) {
                   setState(() {
