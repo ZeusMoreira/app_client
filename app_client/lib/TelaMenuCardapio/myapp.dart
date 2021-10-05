@@ -1,8 +1,11 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-import 'package:app_client/TelaHome/bottomnavi.dart';
-import 'package:app_client/TelaHome/design.dart';
-import 'package:app_client/assets/pb_icons.dart';
 import 'package:flutter/material.dart';
+import 'appbar.dart';
+import './itenscardapio.dart';
+import './menucardapio.dart';
+
+void main(){
+  runApp(MyApp());
+}
 
 class MyApp extends StatefulWidget{
 
@@ -18,10 +21,17 @@ class _MyAppState extends State<MyApp>{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: ReusableWidgets.getAppBar('Cardápio'),
         backgroundColor: Color(0xFFFF9B0D),
-        body: Design(),
-        bottomNavigationBar: BottomNavi(),
+        body: SafeArea(child: 
+          Column(
+            children: [
+              MenuCardapio(),
+              ItensCardapio(),
+            ],
+          ),
+        ), 
       )
-      );
+     );
   }
 }
