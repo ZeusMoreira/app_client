@@ -4,14 +4,14 @@ import 'package:app_client/TelaSobre/sobre.dart';
 import 'package:app_client/assets/pb_icons.dart';
 import 'package:flutter/material.dart';
 
-class MyApp extends StatefulWidget{
+class TelaHome extends StatefulWidget{
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _TelaHomeState createState() => _TelaHomeState();
 
   }
 
-class _MyAppState extends State<MyApp>{
+class _TelaHomeState extends State<TelaHome>{
   int _currentIndex = 0;
 
   final screens = [

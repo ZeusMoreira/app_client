@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:app_client/TelaMenuCardapio/telacardapio.dart';
 import 'package:app_client/assets/pb_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,10 @@ class _CardapioState extends State<Cardapio> {
                           primary: Color(0xFFFFFFFF),
                           onPrimary: Color(0xFF434343),
                         ),
-                        onPressed: (){},
+                        onPressed: (){Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TelaCardapio()),
+                        );},
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

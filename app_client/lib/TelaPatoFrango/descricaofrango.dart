@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new
 
-import 'package:app_client/TelaHome/myapp.dart';
+import 'package:app_client/TelaHome/telahome.dart';
 import 'package:app_client/TelaPatoFrango/design2.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +24,7 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
               icon: Icon(Icons.arrow_back_ios_new_sharp),
               onPressed: () {
                 Navigator.of(context)
-                    .pop(MaterialPageRoute(builder: (context) => MyApp()));
+                    .pop(MaterialPageRoute(builder: (context) => TelaHome()));
               },
             ),
           ),
