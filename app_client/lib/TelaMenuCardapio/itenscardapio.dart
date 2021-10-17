@@ -10,32 +10,33 @@ class _ItensCardapioState extends State<ItensCardapio> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 30.0),
-      child: Container(
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0))),
-          height: (MediaQuery.of(context).size.height)*0.75,
-          width: double.infinity,
-          child: GridView.count(
-            primary: false,
-            padding: EdgeInsets.all(30),
-            crossAxisSpacing: 26,
-            mainAxisSpacing: 32,
-            crossAxisCount: 2,
-            childAspectRatio: 0.8,
-            children: [
-              ItemCard(),
-              ItemCard(),
-              ItemCard(),
-              ItemCard(),
-              ItemCard(),
-              ItemCard(),
-            ],
-          )),
-    );
+        padding: EdgeInsets.only(top: 30.0),
+        child: Container(
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20.0),
+                    topRight: Radius.circular(20.0))),
+            height: (MediaQuery.of(context).size.height)*0.7815,
+            width: double.infinity,
+            child: GridView.count(
+              primary: false,
+              padding: EdgeInsets.all(30),
+              crossAxisSpacing: 26,
+              mainAxisSpacing: 32,
+              crossAxisCount: 2,
+              childAspectRatio: 0.8,
+              children: [
+                ItemCard(),
+                ItemCard(),
+                ItemCard(),
+                ItemCard(),
+                ItemCard(),
+                ItemCard(),
+              ],
+            )),
+      )
+    ;
   }
 }
 
