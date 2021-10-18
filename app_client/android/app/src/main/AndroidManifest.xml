@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lameirao.com.app_client">
    <application
-        android:label="app_client"
+        android:label="Pato Burguer"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
