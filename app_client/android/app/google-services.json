@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "941576531880",
+    "project_id": "pato-burguer-adm",
+    "storage_bucket": "pato-burguer-adm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941576531880:android:6bf78a678cf5468ba3779d",
+        "android_client_info": {
+          "package_name": "com.example.app_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941576531880-b475lk0v8o3uvn5cvod8ps11dbfhrqik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK2H6B27efCakg9IFhARGaGxoID_6lpGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941576531880-b475lk0v8o3uvn5cvod8ps11dbfhrqik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941576531880:android:526c0d5247caa8dea3779d",
+        "android_client_info": {
+          "package_name": "lameirao.com.app_client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941576531880-b475lk0v8o3uvn5cvod8ps11dbfhrqik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK2H6B27efCakg9IFhARGaGxoID_6lpGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941576531880-b475lk0v8o3uvn5cvod8ps11dbfhrqik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
