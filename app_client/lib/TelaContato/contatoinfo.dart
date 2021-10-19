@@ -1,7 +1,9 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContatoInfo extends StatefulWidget {
   @override
@@ -9,6 +11,7 @@ class ContatoInfo extends StatefulWidget {
 }
 
 class _ContatoInfoState extends State<ContatoInfo> {
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -362,15 +365,27 @@ class _ContatoInfoState extends State<ContatoInfo> {
                   width: (MediaQuery.of(context).size.width)*0.0083,
                 ),
                 Container(
-                  child: Text(
-                    "PatoBurguerOficial",
-                    style: new TextStyle(
-                        fontSize: (MediaQuery.of(context).size.height)*0.0234375,
-                        fontFamily: "Roboto",
-                        fontStyle: FontStyle.normal,
-                        color: Color(0xFFFFB54B),
-                        fontWeight: FontWeight.w900),
-                  ),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "PatoBurguer1",
+                          style:  TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.deepOrange,
+                            fontSize: (MediaQuery.of(context).size.height)*0.0234375,
+                            fontFamily: "Roboto",
+                            fontStyle: FontStyle.normal,
+                            color: Color(0xFFFFB54B),
+                            fontWeight: FontWeight.w900),
+                          recognizer: TapGestureRecognizer()..onTap = () async {
+                            var url = "https://www.facebook.com/PatoBurguer1";
+                            if (await canLaunch (url)){
+                              await launch(url);
+                            }else{
+                              throw "Cannot load Url";
+                            }}
+                  )])),
                 )
               ]),
         ),
@@ -393,15 +408,27 @@ class _ContatoInfoState extends State<ContatoInfo> {
                   width: (MediaQuery.of(context).size.width)*0.0083,
                 ),
                 Container(
-                  child: Text(
-                    "@patoburguer",
-                    style: new TextStyle(
-                        fontSize: (MediaQuery.of(context).size.height)*0.0234375,
-                        fontFamily: "Roboto",
-                        fontStyle: FontStyle.normal,
-                        color: Color(0xFFFFB54B),
-                        fontWeight: FontWeight.w900),
-                  ),
+                  child : RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "PatoBurguer_",
+                          style:  TextStyle(
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.deepOrange,
+                            fontSize: (MediaQuery.of(context).size.height)*0.0234375,
+                            fontFamily: "Roboto",
+                            fontStyle: FontStyle.normal,
+                            color: Color(0xFFFFB54B),
+                            fontWeight: FontWeight.w900),
+                          recognizer: TapGestureRecognizer()..onTap = () async {
+                            var url_2 = "https://instagram.com/patoburguer_?utm_medium=copy_link";
+                            if (await canLaunch (url_2)){
+                              await launch(url_2);
+                            }else{
+                              throw "Cannot load Url";
+                            }}
+                  )])),
                 )
               ]),
         ),

@@ -40,7 +40,12 @@ class _ItensCardapioState extends State<ItensCardapio> {
   }
 }
 
-class ItemCard extends StatelessWidget {
+class ItemCard extends StatefulWidget {
+  @override
+  State<ItemCard> createState() => _ItemCardState();
+}
+
+class _ItemCardState extends State<ItemCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -64,7 +69,12 @@ class ItemCard extends StatelessWidget {
   }
 }
 
-class ContentCard extends StatelessWidget {
+class ContentCard extends StatefulWidget {
+  @override
+  State<ContentCard> createState() => _ContentCardState();
+}
+
+class _ContentCardState extends State<ContentCard> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -103,7 +113,12 @@ class ContentCard extends StatelessWidget {
   }
 }
 
-class InfoCard extends StatelessWidget {
+class InfoCard extends StatefulWidget {
+  @override
+  State<InfoCard> createState() => _InfoCardState();
+}
+
+class _InfoCardState extends State<InfoCard> {
   @override
   Widget build(BuildContext context) {
     return Column(
