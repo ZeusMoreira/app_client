@@ -3,7 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class BackgroundFrango extends StatefulWidget {
-
+  late final String id;
+  BackgroundFrango(this.id);
   @override
   _BackgroundFrangoState createState() => _BackgroundFrangoState();
 }
@@ -85,7 +86,7 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
                                   child: Row(
                                     children: [
                                       Text(
-                                        snapshot.data['Pato-Frango']['nome'],
+                                        snapshot.data[widget.id]['nome'],
                                         style: TextStyle(
                                             color: Color(0xFF434343),
                                             fontSize: (MediaQuery.of(context).size.height)*0.0375,
@@ -129,7 +130,7 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
                                             height: (MediaQuery.of(context).size.height)*0.105,
                                             width: (MediaQuery.of(context).size.width)*0.8555,
                                             child: Text(
-                                                snapshot.data['Pato-Frango']['detalhes'],
+                                                snapshot.data[widget.id]['detalhes'],
                                                 textAlign: TextAlign.justify,
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(67, 67, 67, 0.6),
@@ -178,7 +179,7 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
                                             height: (MediaQuery.of(context).size.height)*0.078125,
                                             width: (MediaQuery.of(context).size.width)*0.8555,
                                             child: Text(
-                                                snapshot.data['Pato-Frango']['ingredientes'],
+                                                snapshot.data[widget.id]['ingredientes'],
                                                 textAlign: TextAlign.justify,
                                                 style: TextStyle(
                                                     color: Color.fromRGBO(67, 67, 67, 0.6),
@@ -212,7 +213,7 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
                                             ),
                                             children: [
                                               TextSpan(
-                                                  text: "12,75",
+                                                  text: snapshot.data[widget.id]['preco'],
                                                   style: TextStyle(
                                                       color: Color(0xFF434343),
                                                       fontSize: (MediaQuery.of(context).size.height)*0.046875,
@@ -231,14 +232,15 @@ class _BackgroundFrangoState extends State<BackgroundFrango> {
                         ),
                       ),
                       Positioned(
-                        right: (MediaQuery.of(context).size.width)*0.03,
-                        left: (MediaQuery.of(context).size.width)*0.03,
+                        right: (MediaQuery.of(context).size.width)*0.1305,
+                        left: (MediaQuery.of(context).size.width)*0.1305,
                         top: (MediaQuery.of(context).size.height)*0.073125,
-                        child: Image.asset(
-                            "assets/images/pato-frango.png",
-                            fit: BoxFit.fill,
-                            height: (MediaQuery.of(context).size.height)*0.374,
-                            width: (MediaQuery.of(context).size.width)*0.8388
+                        child:
+                        Image.network(
+                          snapshot.data[widget.id]['imagem'],
+                          fit: BoxFit.fill,
+                          height: (MediaQuery.of(context).size.height)*0.3504,
+                          width: (MediaQuery.of(context).size.width)*0.7388,
                         ),
                       ),
                     ]

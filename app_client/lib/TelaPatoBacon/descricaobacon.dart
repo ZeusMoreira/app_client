@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 
 class Background extends StatefulWidget {
 
-
+  late final String id;
+  Background(this.id);
   @override
   _BackgroundState createState() => _BackgroundState();
 }
@@ -88,7 +89,7 @@ class _BackgroundState extends State<Background> {
                                 child: Row(
                                   children: [
                                     Text(
-                                      snapshot.data['Pato-Bacon']['nome'],
+                                      snapshot.data[widget.id]['nome'],
                                       style: TextStyle(
                                           color: Color(0xFF434343),
                                           fontSize: (MediaQuery.of(context).size.height)*0.0375,
@@ -132,7 +133,7 @@ class _BackgroundState extends State<Background> {
                                           height: (MediaQuery.of(context).size.height)*0.105,
                                           width: (MediaQuery.of(context).size.width)*0.8555,
                                           child: Text(
-                                              snapshot.data['Pato-Bacon']['detalhes'],
+                                              snapshot.data[widget.id]['detalhes'],
                                               textAlign: TextAlign.justify,
                                               style: TextStyle(
                                                   color: Color.fromRGBO(67, 67, 67, 0.6),
@@ -181,7 +182,7 @@ class _BackgroundState extends State<Background> {
                                           height: (MediaQuery.of(context).size.height)*0.078125,
                                           width: (MediaQuery.of(context).size.width)*0.8555,
                                           child: Text(
-                                              snapshot.data['Pato-Bacon']['ingredientes'],
+                                              snapshot.data[widget.id]['ingredientes'],
                                               textAlign: TextAlign.justify,
                                               style: TextStyle(
                                                   color: Color.fromRGBO(67, 67, 67, 0.6),
@@ -215,7 +216,7 @@ class _BackgroundState extends State<Background> {
                                           ),
                                           children: [
                                             TextSpan(
-                                                text: "16,00",
+                                                text: snapshot.data[widget.id]['preco'],
                                                 style: TextStyle(
                                                     color: Color(0xFF434343),
                                                     fontSize: (MediaQuery.of(context).size.height)*0.046875,
@@ -238,8 +239,8 @@ class _BackgroundState extends State<Background> {
                       left: (MediaQuery.of(context).size.width)*0.1305,
                       top: (MediaQuery.of(context).size.height)*0.073125,
                       child:
-                      Image.asset(
-                        "assets/images/pato-bacon_solo.png",
+                      Image.network(
+                        snapshot.data[widget.id]['imagem'],
                         fit: BoxFit.fill,
                         height: (MediaQuery.of(context).size.height)*0.3504,
                         width: (MediaQuery.of(context).size.width)*0.7388,

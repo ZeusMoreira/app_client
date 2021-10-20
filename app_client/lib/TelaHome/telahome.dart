@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'dart:math';
+
 import 'package:app_client/TelaHome/design.dart';
 import 'package:app_client/TelaSobre/sobre.dart';
 import 'package:app_client/assets/pb_icons.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class TelaHome extends StatefulWidget{
@@ -12,19 +15,55 @@ class TelaHome extends StatefulWidget{
   }
 
 class _TelaHomeState extends State<TelaHome>{
+
+  late Future userFuture;
   int _currentIndex = 0;
 
-  final screens = [
-    Design(),
-    Sobre(),
-  ];
+  @override
+  void initState(){
+    super.initState();
+    userFuture = getData();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: Color(0xFFFF9B0D),
-          body: screens[_currentIndex],
+          body: FutureBuilder(
+              future: userFuture,
+              builder: (context,AsyncSnapshot snapshot) {
+                      switch (snapshot.connectionState) {
+                        case ConnectionState.none:
+                          return Text('none');
+                        case ConnectionState.active:
+                        case ConnectionState.waiting:
+                          return Center(child: CircularProgressIndicator());
+                        case ConnectionState.done:
+                          if (snapshot.hasError) {
+                            return Center(child: CircularProgressIndicator());
+                          }
+                          var arr = [];
+                          final _random = new Random();
+                          for(int i=0; i < snapshot.data.length-1; i++){
+                            String id = snapshot.data['lunch'][i];
+                            if(snapshot.data[id]['promo'] == true){
+                              arr.add(snapshot.data['lunch'][i]);
+                            }
+                          }
+                          var element = arr[_random.nextInt(arr.length)];
+                          var element2 = arr[_random.nextInt(arr.length)];
+
+                          final screens = [
+                            Design(element,element2),
+                            Sobre(),
+                          ];
+                          return screens[_currentIndex];
+                        default:
+                          return Text('default');
+                      }
+              }),
           bottomNavigationBar: BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,
                 unselectedItemColor: Color(0xFFDCDCDC),
@@ -59,3 +98,13 @@ class _TelaHomeState extends State<TelaHome>{
     );
   }
 }
+
+getData() async{
+  var a = await FirebaseFirestore.instance
+      .collection('PatoBurguer')
+      .doc('lanches')
+      .get();
+  return a.data();
+}
+
+

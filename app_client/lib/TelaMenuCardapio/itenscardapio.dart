@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
 import 'descricao_item.dart';
 
 class ItensCardapio extends StatefulWidget {
@@ -37,7 +36,8 @@ class _ItensCardapioState extends State<ItensCardapio> {
                   var arr = [];
                   var arr2 = [];
                   for(int i=0; i < snapshot.data.length-1; i++){
-                    if(snapshot.data['lunch'][i] == 'Pato-Bacon' || snapshot.data['lunch'][i] == 'Pato-Frango' || snapshot.data['lunch'][i] == 'PatoTata Grande' ){
+                    String id = snapshot.data['lunch'][i];
+                    if(snapshot.data[id]['promo'] == true){
                       arr.add(snapshot.data['lunch'][i]);
                       arr2.add(i);
                     }

@@ -2,8 +2,10 @@
 
 import 'package:app_client/TelaHome/telahome.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContatoPage extends StatefulWidget {
   @override
@@ -408,16 +410,31 @@ class _ContatoPage extends State<ContatoPage> {
                                             width: (MediaQuery.of(context).size.width)*0.0083,
                                           ),
                                           Container(
-                                            child: Text(
-                                              snapshot.data['redeSoc']['face'],
-                                              style: new TextStyle(
-                                                  fontSize: (MediaQuery.of(context).size.height)*0.0234375,
-                                                  fontFamily: "Roboto",
-                                                  fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
-                                                  fontWeight: FontWeight.w900),
-                                            ),
-                                          )
+                                            child: RichText(
+                                              text:TextSpan(
+                                                children:[
+                                                  TextSpan(
+                                                    text: snapshot.data['redeSoc']['face'],
+                                                    style:  TextStyle(
+                                                    decoration: TextDecoration.underline,
+                                                    decorationColor: Color(0xFFFFB54B),
+                                                    fontSize: (MediaQuery.of(context).size.height)*0.0234375,
+                                                    fontFamily: "Roboto",
+                                                    fontStyle: FontStyle.normal,
+                                                    color: Color(0xFFFFB54B),
+                                                    fontWeight: FontWeight.w900),
+                                                  recognizer: TapGestureRecognizer()..onTap = () async {
+                                                    var url = "https://www.facebook.com/PatoBurguer1";
+                                                    if (await canLaunch (url)){
+                                                      await launch(url);
+                                                    }else{
+                                                      throw "Cannot load Url";
+                                                    }}
+                                                 ),
+                                                ]
+                                              )
+                                            )
+                                          ),
                                         ]),
                                   ),
 
@@ -439,15 +456,24 @@ class _ContatoPage extends State<ContatoPage> {
                                             width: (MediaQuery.of(context).size.width)*0.0083,
                                           ),
                                           Container(
-                                            child: Text(
-                                              snapshot.data['redeSoc']['insta'],
+                                            child: RichText(text: TextSpan(
+                                              text: snapshot.data['redeSoc']['insta'],
                                               style: new TextStyle(
+                                                  decoration: TextDecoration.underline,
+                                                  decorationColor: Color(0xFFFFB54B),
                                                   fontSize: (MediaQuery.of(context).size.height)*0.0234375,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
                                                   color: Color(0xFFFFB54B),
                                                   fontWeight: FontWeight.w900),
-                                            ),
+                                                recognizer: TapGestureRecognizer()..onTap = () async {
+                                                  var url_2 = "https://instagram.com/patoburguer_?utm_medium=copy_link";
+                                                  if (await canLaunch(url_2)){
+                                                    await launch(url_2);
+                                                  }else{
+                                                    throw "Cannot load Url";
+                                                  }}
+                                            ),)
                                           )
                                         ]),
                                   ),
@@ -479,3 +505,4 @@ getData() async{
       .get();
   return a.data();
 }
+
