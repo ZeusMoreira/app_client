@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'package:app_client/TelaHome/design.dart';
 import 'package:app_client/TelaSobre/sobre.dart';
-import 'package:app_client/assets/pb_icons.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
