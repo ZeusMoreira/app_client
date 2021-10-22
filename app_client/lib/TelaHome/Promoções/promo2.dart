@@ -33,7 +33,6 @@ class _PromoDoisState extends State<PromoDois> {
               if (snapshot.hasError) {
                 return Center(child: CircularProgressIndicator());
               }
-
               return Stack(
                 children: [
                   Container(
@@ -146,7 +145,7 @@ class _PromoDoisState extends State<PromoDois> {
                       width: MediaQuery
                           .of(context)
                           .size
-                          .width * 0.39,
+                          .width * 0.4,
                     ),
                   ),
                 ],

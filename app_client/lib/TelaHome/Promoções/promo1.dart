@@ -138,7 +138,7 @@ class _PromoUmState extends State<PromoUm> {
                           ,)
                     ),
                   Container(
-                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.41),
+                    padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.4),
                     child: Image.network(
                     snapshot.data[widget.el]['imagem'],
                     height: MediaQuery
@@ -148,7 +148,7 @@ class _PromoUmState extends State<PromoUm> {
                     width: MediaQuery
                         .of(context)
                         .size
-                        .width * 0.39,
+                        .width * 0.4,
                     ),
                   ),
                 ],
