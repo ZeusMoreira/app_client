@@ -36,126 +36,124 @@ class _PromoUmState extends State<PromoUm> {
                 return Center(child: CircularProgressIndicator());
               }
 
-              return Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery
-                        .of(context)
-                        .size
-                        .height * 0.01,
-                    left: MediaQuery
-                        .of(context)
-                        .size
-                        .width * 0.10,
-                    right: MediaQuery
-                        .of(context)
-                        .size
-                        .width * 0.34
-                ),
-                child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16.0),
-                        boxShadow: [BoxShadow(
-                            color: Colors.black.withOpacity(0.25),
-                            spreadRadius: 0,
-                            blurRadius: 4,
-                            offset: Offset(0, 4)
-                        )
-                        ]
-                    ),
-                    height: (MediaQuery
-                        .of(context)
-                        .size
-                        .height) * 0.1503,
-                    width: (MediaQuery
-                        .of(context)
-                        .size
-                        .width) / 1.5487,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16.0)
-                        ),
-                        primary: Color(0xFFFFFFFF),
-                        onPrimary: Color(0xFF434343),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Background(widget.el)),
-                        );
-                      },
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                              padding: EdgeInsets.only(
-                                  top: (MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height) * 0.029,
-                                  right: (MediaQuery
-                                      .of(context)
-                                      .size
-                                      .width) * 0.48,
-                                  bottom: (MediaQuery
-                                      .of(context)
-                                      .size
-                                      .height) * 0.01
+              return Stack(
+                  children: [
+                      Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16.0),
+                              boxShadow: [BoxShadow(
+                                  color: Colors.black.withOpacity(0.25),
+                                  spreadRadius: 0,
+                                  blurRadius: 4,
+                                  offset: Offset(0, 4)
                               )
+                              ]
                           ),
-                          Text(
-                            snapshot.data[widget.el]['nome'],
-                            style: TextStyle(
-                                color: Color(0xFF434343),
-                                fontWeight: FontWeight.bold,
-                                fontSize: (MediaQuery
-                                    .of(context)
-                                    .size
-                                    .height) * 0.01875
+                          height: (MediaQuery
+                              .of(context)
+                              .size
+                              .height) * 0.1503,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(16.0)
+                              ),
+                              primary: Color(0xFFFFFFFF),
+                              onPrimary: Color(0xFF434343),
                             ),
-                          ),
-                          Text(
-                            "Descontassoo do \nPato pra você!!!",
-                            style: TextStyle(
-                                color: Color(0xFFFF9B0D),
-                                fontWeight: FontWeight.bold,
-                                fontSize: (MediaQuery
-                                    .of(context)
-                                    .size
-                                    .height) * 0.01875
-                            ),
-                          ),
-                          RichText(
-                              text: TextSpan(
-                                  text: "R\$",
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Background(widget.el)),
+                              );
+                            },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                    padding: EdgeInsets.only(
+                                        top: (MediaQuery
+                                            .of(context)
+                                            .size
+                                            .height) * 0.029,
+                                        right: (MediaQuery
+                                            .of(context)
+                                            .size
+                                            .width) * 0.48,
+                                        bottom: (MediaQuery
+                                            .of(context)
+                                            .size
+                                            .height) * 0.01
+                                    )
+                                ),
+                                Text(
+                                  snapshot.data[widget.el]['nome'],
                                   style: TextStyle(
-                                    color: Color(0xFF434343),
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: (MediaQuery
-                                        .of(context)
-                                        .size
-                                        .height) * 0.015625,
+                                      color: Color(0xFF434343),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: (MediaQuery
+                                          .of(context)
+                                          .size
+                                          .height) * 0.01875
                                   ),
-                                  children: [
-                                    TextSpan(
-                                        text: snapshot.data[widget.el]['preco'],
+                                ),
+                                Text(
+                                  "Descontassoo do \nPato pra você!!!",
+                                  style: TextStyle(
+                                      color: Color(0xFFFF9B0D),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: (MediaQuery
+                                          .of(context)
+                                          .size
+                                          .height) * 0.01875
+                                  ),
+                                ),
+                                RichText(
+                                    text: TextSpan(
+                                        text: "R\$",
                                         style: TextStyle(
                                           color: Color(0xFF434343),
                                           fontWeight: FontWeight.w700,
                                           fontSize: (MediaQuery
                                               .of(context)
                                               .size
-                                              .height) * 0.03125,
-                                        )
-                                    ),
-                                  ]
+                                              .height) * 0.015625,
+                                        ),
+                                        children: [
+                                          TextSpan(
+                                              text: snapshot.data[widget.el]['preco'],
+                                              style: TextStyle(
+                                                color: Color(0xFF434343),
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: (MediaQuery
+                                                    .of(context)
+                                                    .size
+                                                    .height) * 0.03125,
+                                              )
+                                          ),
+                                        ]
 
-                              )
-                          ),
-                        ],)
-                      ,)
-                ),
-              );
+                                    )
+                                ),
+                              ],)
+                            ,)
+                      ),
+                    Container(
+                      padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.4),
+                      child: Image.network(
+                          snapshot.data[widget.el]['imagem'],
+                          height: MediaQuery
+                              .of(context)
+                              .size
+                              .height * 0.16,
+                          width: MediaQuery
+                              .of(context)
+                              .size
+                              .width * 0.4,
+                        ),
+                    ),
+                ]);
+
             default:
               return Text('default');
           }});

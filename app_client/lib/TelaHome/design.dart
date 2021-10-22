@@ -61,66 +61,26 @@ class _DesignState extends State<Design> {
                     .height) / 1.10,
                 width: double.infinity,
 
-                child: Column(
-                    children: [
-                      Logo(),
-                      PromoText(),
-                      PromoUm(widget.el1),
-                      PromoDois(widget.el2),
-                      SizedBox(height: MediaQuery.of(context).size.height*0.04),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Cardapio(),
-                          Contato(),
-                        ],
-                      ),
-                    ],),
-              ),
-              Positioned(
-                top: (MediaQuery
-                    .of(context)
-                    .size
-                    .height) * 0.2346,
-                left: (MediaQuery
-                    .of(context)
-                    .size
-                    .width) * 0.4565,
-                child: Image.network(
-                  snapshot.data[widget.el1]['imagem'],
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.18,
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.39,
+                child: SingleChildScrollView(
+                  child: Column(
+                      children: [
+                        Logo(),
+                        PromoText(),
+                        SizedBox(height: MediaQuery.of(context).size.height*0.02),
+                        PromoUm(widget.el1),
+                        SizedBox(height: MediaQuery.of(context).size.height*0.03),
+                        PromoDois(widget.el2),
+                        SizedBox(height: MediaQuery.of(context).size.height*0.05),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Cardapio(),
+                            Contato(),
+                          ],
+                        ),
+                      ],),
                 ),
               ),
-              Positioned(
-                top: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.4453,
-                left: (MediaQuery
-                    .of(context)
-                    .size
-                    .width) * 0.4565,
-                child: Image.network(
-                  snapshot.data[widget.el2]['imagem'],
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.18,
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.39,
-                ),
-              ),
-
-
             ],
           );
         default:
