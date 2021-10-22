@@ -74,6 +74,7 @@ flutter:
     - assets/images/pato-frango.png
     - assets/images/pato-bacon_solo.png
     - assets/images/logo-patoburguer.png
+    - assets/images/familia-pato-transp.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

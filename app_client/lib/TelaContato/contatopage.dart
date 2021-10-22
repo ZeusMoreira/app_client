@@ -103,7 +103,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFF898989),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -127,7 +127,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -167,7 +167,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFF898989),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         )
@@ -191,14 +191,14 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
 
                                         Container(
                                           child: Padding(
-                                            padding: EdgeInsets.only(  //Arrumar depois
+                                            padding: EdgeInsets.only(
                                               left: (MediaQuery.of(context).size.width)*0.3666,
                                             ),
                                             child: Text(
@@ -207,7 +207,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.015625,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFFb1b1b1),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           ),
@@ -232,7 +232,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -248,7 +248,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.015625,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFFb1b1b1),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           ),
@@ -273,7 +273,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -288,7 +288,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.015625,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFFb1b1b1),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           ),
@@ -328,7 +328,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFF898989),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           )
@@ -346,7 +346,7 @@ class _ContatoPage extends State<ContatoPage> {
                                         children: [
                                           Icon(
                                             MdiIcons.whatsapp,
-                                            color: Color(0xFFFFB54B),
+                                            color: Color(0xFFb1b1b1),
                                             size: (MediaQuery.of(context).size.height)*0.03125,
                                           ),
 
@@ -361,7 +361,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                     fontSize: (MediaQuery.of(context).size.height)*0.0234375,
                                                     fontFamily: "Roboto",
                                                     fontStyle: FontStyle.normal,
-                                                    color: Color(0xFFFFB54B),
+                                                    color: Color(0xFFb1b1b1),
                                                     fontWeight: FontWeight.w900),
                                               ),
                                             ),
@@ -384,7 +384,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFF898989),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           )
@@ -416,7 +416,6 @@ class _ContatoPage extends State<ContatoPage> {
                                                   TextSpan(
                                                     text: snapshot.data['redeSoc']['face'],
                                                     style:  TextStyle(
-                                                    decoration: TextDecoration.underline,
                                                     decorationColor: Color(0xFFFFB54B),
                                                     fontSize: (MediaQuery.of(context).size.height)*0.0234375,
                                                     fontFamily: "Roboto",
@@ -459,7 +458,7 @@ class _ContatoPage extends State<ContatoPage> {
                                             child: RichText(text: TextSpan(
                                               text: snapshot.data['redeSoc']['insta'],
                                               style: new TextStyle(
-                                                  decoration: TextDecoration.underline,
+
                                                   decorationColor: Color(0xFFFFB54B),
                                                   fontSize: (MediaQuery.of(context).size.height)*0.0234375,
                                                   fontFamily: "Roboto",

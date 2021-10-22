@@ -61,51 +61,21 @@ class _DesignState extends State<Design> {
                     .height) / 1.10,
                 width: double.infinity,
 
-                child: SingleChildScrollView(
-                  child: Column(
+                child: Column(
                     children: [
                       Logo(),
                       PromoText(),
                       PromoUm(widget.el1),
                       PromoDois(widget.el2),
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: (MediaQuery
-                              .of(context)
-                              .size
-                              .height) * 0.053125,
-                          bottom: (MediaQuery
-                              .of(context)
-                              .size
-                              .height) * 0.069375,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              top: (MediaQuery
-                                  .of(context)
-                                  .size
-                                  .height) * 0.004,
-                              left: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width * 0.07,
-                              right: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width * 0.07
-
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Cardapio(),
-                              Contato(),
-                            ],
-                          ),
-                        ),
-                      )
+                      SizedBox(height: MediaQuery.of(context).size.height*0.04),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Cardapio(),
+                          Contato(),
+                        ],
+                      ),
                     ],),
-                ),
               ),
               Positioned(
                 top: (MediaQuery
