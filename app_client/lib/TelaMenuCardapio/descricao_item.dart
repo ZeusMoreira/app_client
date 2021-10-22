@@ -81,159 +81,161 @@ class _descricaoItemState extends State<DescricaoItem> {
                             ),
                             height: (MediaQuery.of(context).size.height)/1.7,
                             width: (MediaQuery.of(context).size.width),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(
-                                    left: (MediaQuery.of(context).size.width)*0.06944,
-                                    top: (MediaQuery.of(context).size.height)*0.135,
+                            child: SingleChildScrollView(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(
+                                      left: (MediaQuery.of(context).size.width)*0.06944,
+                                      top: (MediaQuery.of(context).size.height)*0.135,
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          snapshot.data[widget.id]['nome'],
+                                          style: TextStyle(
+                                              color: Color(0xFF434343),
+                                              fontSize: (MediaQuery.of(context).size.height)*0.0375,
+                                              fontWeight: FontWeight.w700,
+                                              fontStyle: FontStyle.normal
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                  child: Row(
+                                  Row(
                                     children: [
-                                      Text(
-                                        snapshot.data[widget.id]['nome'],
-                                        style: TextStyle(
-                                            color: Color(0xFF434343),
-                                            fontSize: (MediaQuery.of(context).size.height)*0.0375,
-                                            fontWeight: FontWeight.w700,
-                                            fontStyle: FontStyle.normal
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          top: (MediaQuery.of(context).size.height)*0.0125,
+                                          left: (MediaQuery.of(context).size.width)*0.0694,
+                                        ),
+                                        child: Text(
+                                            "Detalhes",
+                                            style: TextStyle(
+                                                color: Color(0xFF434343),
+                                                fontSize: (MediaQuery.of(context).size.height)*0.028125,
+                                                fontWeight: FontWeight.w900,
+                                                fontStyle: FontStyle.normal
+                                            )
                                         ),
                                       ),
                                     ],
                                   ),
-                                ),
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: (MediaQuery.of(context).size.height)*0.0125,
-                                        left: (MediaQuery.of(context).size.width)*0.0694,
-                                      ),
-                                      child: Text(
-                                          "Detalhes",
-                                          style: TextStyle(
-                                              color: Color(0xFF434343),
-                                              fontSize: (MediaQuery.of(context).size.height)*0.028125,
-                                              fontWeight: FontWeight.w900,
-                                              fontStyle: FontStyle.normal
-                                          )
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          top: (MediaQuery.of(context).size.height)*0.0125,
-                                          left: (MediaQuery.of(context).size.width)*0.0694,
-                                          right: (MediaQuery.of(context).size.width)*0.0694
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            height: (MediaQuery.of(context).size.height)*0.105,
-                                            width: (MediaQuery.of(context).size.width)*0.8555,
-                                            child: Text(
-                                                snapshot.data[widget.id]['detalhes'],
-                                                textAlign: TextAlign.justify,
-                                                style: TextStyle(
-                                                    color: Color.fromRGBO(67, 67, 67, 0.6),
-                                                    fontSize: (MediaQuery.of(context).size.height)*0.0215,
-                                                    fontWeight: FontWeight.w500,
-                                                    fontStyle: FontStyle.normal
-                                                )
-                                            ),
-                                          )
-
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: (MediaQuery.of(context).size.height)*0.0125,
-                                        left: (MediaQuery.of(context).size.width)*0.0694,
-                                      ),
-                                      child: Text(
-                                          "Ingredientes",
-                                          style: TextStyle(
-                                              color: Color(0xFF434343),
-                                              fontSize: (MediaQuery.of(context).size.height)*0.028125,
-                                              fontWeight: FontWeight.w900,
-                                              fontStyle: FontStyle.normal
-                                          )
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                          top: (MediaQuery.of(context).size.height)*0.0125,
-                                          left: (MediaQuery.of(context).size.width)*0.0694,
-                                          right: (MediaQuery.of(context).size.width)*0.0694
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Container(
-                                            height: (MediaQuery.of(context).size.height)*0.078125,
-                                            width: (MediaQuery.of(context).size.width)*0.8555,
-                                            child: Text(
-                                                snapshot.data[widget.id]['ingredientes'],
-                                                textAlign: TextAlign.justify,
-                                                style: TextStyle(
-                                                    color: Color.fromRGBO(67, 67, 67, 0.6),
-                                                    fontSize: (MediaQuery.of(context).size.height)*0.021875,
-                                                    fontWeight: FontWeight.w500,
-                                                    fontStyle: FontStyle.normal
-                                                )
-                                            ),
-                                          )
-
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: (MediaQuery.of(context).size.height)*0.0125,
-                                        left: (MediaQuery.of(context).size.width)*0.0694,
-                                      ),
-                                      child: RichText(
-                                        text: TextSpan(
-                                            text: "R\$",
-                                            style: TextStyle(
-                                                color: Color(0xFFFF9B0D),
-                                                fontSize: (MediaQuery.of(context).size.height)*0.01875,
-                                                fontWeight: FontWeight.w700,
-                                                fontStyle: FontStyle.normal
-                                            ),
-                                            children: [
-                                              TextSpan(
-                                                  text: snapshot.data[widget.id]['preco'],
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            top: (MediaQuery.of(context).size.height)*0.0125,
+                                            left: (MediaQuery.of(context).size.width)*0.0694,
+                                            right: (MediaQuery.of(context).size.width)*0.0694
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              height: (MediaQuery.of(context).size.height)*0.105,
+                                              width: (MediaQuery.of(context).size.width)*0.8555,
+                                              child: Text(
+                                                  snapshot.data[widget.id]['detalhes'],
+                                                  textAlign: TextAlign.justify,
                                                   style: TextStyle(
-                                                      color: Color(0xFF434343),
-                                                      fontSize: (MediaQuery.of(context).size.height)*0.046875,
-                                                      fontWeight: FontWeight.w900,
+                                                      color: Color.fromRGBO(67, 67, 67, 0.6),
+                                                      fontSize: (MediaQuery.of(context).size.height)*0.0215,
+                                                      fontWeight: FontWeight.w500,
                                                       fontStyle: FontStyle.normal
                                                   )
-                                              )
-                                            ]
+                                              ),
+                                            )
+
+                                          ],
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          top: (MediaQuery.of(context).size.height)*0.0125,
+                                          left: (MediaQuery.of(context).size.width)*0.0694,
+                                        ),
+                                        child: Text(
+                                            "Ingredientes",
+                                            style: TextStyle(
+                                                color: Color(0xFF434343),
+                                                fontSize: (MediaQuery.of(context).size.height)*0.028125,
+                                                fontWeight: FontWeight.w900,
+                                                fontStyle: FontStyle.normal
+                                            )
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                            top: (MediaQuery.of(context).size.height)*0.0125,
+                                            left: (MediaQuery.of(context).size.width)*0.0694,
+                                            right: (MediaQuery.of(context).size.width)*0.0694
+                                        ),
+                                        child: Column(
+                                          children: [
+                                            Container(
+                                              height: (MediaQuery.of(context).size.height)*0.078125,
+                                              width: (MediaQuery.of(context).size.width)*0.8555,
+                                              child: Text(
+                                                  snapshot.data[widget.id]['ingredientes'],
+                                                  textAlign: TextAlign.justify,
+                                                  style: TextStyle(
+                                                      color: Color.fromRGBO(67, 67, 67, 0.6),
+                                                      fontSize: (MediaQuery.of(context).size.height)*0.021875,
+                                                      fontWeight: FontWeight.w500,
+                                                      fontStyle: FontStyle.normal
+                                                  )
+                                              ),
+                                            )
+
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          top: (MediaQuery.of(context).size.height)*0.0125,
+                                          left: (MediaQuery.of(context).size.width)*0.0694,
+                                        ),
+                                        child: RichText(
+                                          text: TextSpan(
+                                              text: "R\$",
+                                              style: TextStyle(
+                                                  color: Color(0xFFFF9B0D),
+                                                  fontSize: (MediaQuery.of(context).size.height)*0.01875,
+                                                  fontWeight: FontWeight.w700,
+                                                  fontStyle: FontStyle.normal
+                                              ),
+                                              children: [
+                                                TextSpan(
+                                                    text: snapshot.data[widget.id]['preco'],
+                                                    style: TextStyle(
+                                                        color: Color(0xFF434343),
+                                                        fontSize: (MediaQuery.of(context).size.height)*0.046875,
+                                                        fontWeight: FontWeight.w900,
+                                                        fontStyle: FontStyle.normal
+                                                    )
+                                                )
+                                              ]
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             )
                         ),
                       ),

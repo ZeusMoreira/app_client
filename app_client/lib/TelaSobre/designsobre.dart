@@ -30,12 +30,14 @@ class _DesignSobreState extends State<DesignSobre> {
               ),
               height: (MediaQuery.of(context).size.height)/1.10,
               width: double.infinity,
-              child: Column(
-                children: [
-                  TituloHistoria(),
-                    TextoHistoria(),
-                    SloganPato()  
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    TituloHistoria(),
+                      TextoHistoria(),
+                      SloganPato()
+                  ],
+                ),
               )
           ),
           ImagemPato()    

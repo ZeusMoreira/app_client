@@ -16,7 +16,7 @@ class _ImagemPatoState extends State<ImagemPato> {
             right: (MediaQuery.of(context).size.width)*0.011388,
             left: (MediaQuery.of(context).size.width)*0.013611,
             child: Image.asset(
-              "assets/images/logo-patoburguer.png",
+              "assets/images/familia-pato-transp.png",
               width: (MediaQuery.of(context).size.width)*0.75,
               height: (MediaQuery.of(context).size.height)*0.3078125,
             )

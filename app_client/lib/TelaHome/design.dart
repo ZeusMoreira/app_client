@@ -30,132 +30,63 @@ class _DesignState extends State<Design> {
 
   @override
   Widget build(BuildContext context) => FutureBuilder(
-    future: userFuture,
-    builder: (context,AsyncSnapshot snapshot) {
-      switch (snapshot.connectionState) {
-        case ConnectionState.none:
-          return Text('none');
-        case ConnectionState.active:
-        case ConnectionState.waiting:
-          return Center(child: CircularProgressIndicator());
-        case ConnectionState.done:
-          if (snapshot.hasError) {
+      future: userFuture,
+      builder: (context,AsyncSnapshot snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.none:
+            return Text('none');
+          case ConnectionState.active:
+          case ConnectionState.waiting:
             return Center(child: CircularProgressIndicator());
-          }
-          return Stack(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
+          case ConnectionState.done:
+            if (snapshot.hasError) {
+              return Center(child: CircularProgressIndicator());
+            }
+            return Stack(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
                       color: Colors.white,
-                    ),
-                    borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(20.0),
-                        bottomLeft: Radius.circular(20.0)
-                    )
-                ),
-                height: (MediaQuery
-                    .of(context)
-                    .size
-                    .height) / 1.10,
-                width: double.infinity,
-
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Logo(),
-                      PromoText(),
-                      PromoUm(widget.el1),
-                      PromoDois(widget.el2),
-                      Padding(
-                        padding: EdgeInsets.only(
-                          top: (MediaQuery
-                              .of(context)
-                              .size
-                              .height) * 0.053125,
-                          bottom: (MediaQuery
-                              .of(context)
-                              .size
-                              .height) * 0.069375,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              top: (MediaQuery
-                                  .of(context)
-                                  .size
-                                  .height) * 0.004,
-                              left: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width * 0.07,
-                              right: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width * 0.07
-
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Cardapio(),
-                              Contato(),
-                            ],
-                          ),
-                        ),
+                      border: Border.all(
+                        color: Colors.white,
+                      ),
+                      borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0)
                       )
-                    ],),
-                ),
-              ),
-              Positioned(
-                top: (MediaQuery
-                    .of(context)
-                    .size
-                    .height) * 0.2346,
-                left: (MediaQuery
-                    .of(context)
-                    .size
-                    .width) * 0.4565,
-                child: Image.network(
-                  snapshot.data[widget.el1]['imagem'],
-                  height: MediaQuery
+                  ),
+                  height: (MediaQuery
                       .of(context)
                       .size
-                      .height * 0.18,
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.39,
-                ),
-              ),
-              Positioned(
-                top: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.4453,
-                left: (MediaQuery
-                    .of(context)
-                    .size
-                    .width) * 0.4565,
-                child: Image.network(
-                  snapshot.data[widget.el2]['imagem'],
-                  height: MediaQuery
-                      .of(context)
-                      .size
-                      .height * 0.18,
-                  width: MediaQuery
-                      .of(context)
-                      .size
-                      .width * 0.39,
-                ),
-              ),
+                      .height) / 1.10,
+                  width: double.infinity,
 
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Logo(),
+                        PromoText(),
+                        SizedBox(height: MediaQuery.of(context).size.height*0.02,),
+                        PromoUm(widget.el1),
+                        SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+                        PromoDois(widget.el2),
+                        SizedBox(height: MediaQuery.of(context).size.height*0.05,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Cardapio(),
+                            Contato(),
+                          ],
+                        ),
+                      ],),
+                  ),
+                ),
 
-            ],
-          );
-        default:
-          return Text('default');
-      }});
+              ],
+            );
+          default:
+            return Text('default');
+        }});
 }
 
 getData() async{

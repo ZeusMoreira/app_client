@@ -24,46 +24,47 @@ class _ContatoPage extends State<ContatoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFFF9B0D),
-        appBar: AppBar(
-          leading: Builder(
-            builder: (context) => IconButton(
-              icon: Icon(Icons.arrow_back_ios_new_sharp),
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => TelaHome()));
-              },
-            ),
-          ),
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          centerTitle: true,
-          title: Text(
-            "Contato",
-            style: new TextStyle(
-                fontSize: (MediaQuery.of(context).size.height)*0.0375,
-                fontFamily: "Roboto",
-                fontStyle: FontStyle.normal,
-                color: Color(0xFFFFFFFF),
-                fontWeight: FontWeight.w900),
+      backgroundColor: Color(0xFFFF9B0D),
+      appBar: AppBar(
+        leading: Builder(
+          builder: (context) => IconButton(
+            icon: Icon(Icons.arrow_back_ios_new_sharp),
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => TelaHome()));
+            },
           ),
         ),
-        body: FutureBuilder(
-            future: userFuture,
-            builder: (context,AsyncSnapshot snapshot) {
-              switch (snapshot.connectionState) {
-                case ConnectionState.none:
-                  return Text('none');
-                case ConnectionState.active:
-                case ConnectionState.waiting:
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        title: Text(
+          "Contato",
+          style: new TextStyle(
+              fontSize: (MediaQuery.of(context).size.height)*0.0375,
+              fontFamily: "Roboto",
+              fontStyle: FontStyle.normal,
+              color: Color(0xFFFFFFFF),
+              fontWeight: FontWeight.w900),
+        ),
+      ),
+      body: FutureBuilder(
+          future: userFuture,
+          builder: (context,AsyncSnapshot snapshot) {
+            switch (snapshot.connectionState) {
+              case ConnectionState.none:
+                return Text('none');
+              case ConnectionState.active:
+              case ConnectionState.waiting:
+                return Center(child: CircularProgressIndicator());
+              case ConnectionState.done:
+                if (snapshot.hasError) {
                   return Center(child: CircularProgressIndicator());
-                case ConnectionState.done:
-                  if (snapshot.hasError) {
-                    return Center(child: CircularProgressIndicator());
-                  }
-                  return Stack(
-                    children: [
-                      Column(
+                }
+                return Stack(
+                  children: [
+                    SingleChildScrollView(
+                      child: Column(
                         //crossAxisAlignment: CrossAxisAlignment.center,
                         //mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -77,7 +78,7 @@ class _ContatoPage extends State<ContatoPage> {
                                   borderRadius: BorderRadius.only(
                                       topRight: Radius.circular(20.0),
                                       topLeft: Radius.circular(20.0))),
-                              height: (MediaQuery.of(context).size.height) / 1.2,
+                              height: (MediaQuery.of(context).size.height),
                               width: double.infinity,
 
                               child: Column(
@@ -103,7 +104,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFF898989),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -127,7 +128,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -167,7 +168,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFF898989),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         )
@@ -191,14 +192,14 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
 
                                         Container(
                                           child: Padding(
-                                            padding: EdgeInsets.only(  //Arrumar depois
+                                            padding: EdgeInsets.only(
                                               left: (MediaQuery.of(context).size.width)*0.3666,
                                             ),
                                             child: Text(
@@ -207,7 +208,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.015625,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFFb1b1b1),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           ),
@@ -232,7 +233,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -248,7 +249,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.015625,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFFb1b1b1),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           ),
@@ -273,7 +274,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                 fontSize: (MediaQuery.of(context).size.height)*0.0203125,
                                                 fontFamily: "Roboto",
                                                 fontStyle: FontStyle.normal,
-                                                color: Color(0xFFFFB54B),
+                                                color: Color(0xFFb1b1b1),
                                                 fontWeight: FontWeight.w900),
                                           ),
                                         ),
@@ -288,7 +289,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.015625,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFFb1b1b1),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           ),
@@ -328,7 +329,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFF898989),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           )
@@ -346,7 +347,7 @@ class _ContatoPage extends State<ContatoPage> {
                                         children: [
                                           Icon(
                                             MdiIcons.whatsapp,
-                                            color: Color(0xFFFFB54B),
+                                            color: Color(0xFFb1b1b1),
                                             size: (MediaQuery.of(context).size.height)*0.03125,
                                           ),
 
@@ -361,7 +362,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                     fontSize: (MediaQuery.of(context).size.height)*0.0234375,
                                                     fontFamily: "Roboto",
                                                     fontStyle: FontStyle.normal,
-                                                    color: Color(0xFFFFB54B),
+                                                    color: Color(0xFFb1b1b1),
                                                     fontWeight: FontWeight.w900),
                                               ),
                                             ),
@@ -384,7 +385,7 @@ class _ContatoPage extends State<ContatoPage> {
                                                   fontSize: (MediaQuery.of(context).size.height)*0.028125,
                                                   fontFamily: "Roboto",
                                                   fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
+                                                  color: Color(0xFF898989),
                                                   fontWeight: FontWeight.w900),
                                             ),
                                           )
@@ -410,30 +411,29 @@ class _ContatoPage extends State<ContatoPage> {
                                             width: (MediaQuery.of(context).size.width)*0.0083,
                                           ),
                                           Container(
-                                            child: RichText(
-                                              text:TextSpan(
-                                                children:[
-                                                  TextSpan(
-                                                    text: snapshot.data['redeSoc']['face'],
-                                                    style:  TextStyle(
-                                                    decoration: TextDecoration.underline,
-                                                    decorationColor: Color(0xFFFFB54B),
-                                                    fontSize: (MediaQuery.of(context).size.height)*0.0234375,
-                                                    fontFamily: "Roboto",
-                                                    fontStyle: FontStyle.normal,
-                                                    color: Color(0xFFFFB54B),
-                                                    fontWeight: FontWeight.w900),
-                                                  recognizer: TapGestureRecognizer()..onTap = () async {
-                                                    var url = "https://www.facebook.com/PatoBurguer1";
-                                                    if (await canLaunch (url)){
-                                                      await launch(url);
-                                                    }else{
-                                                      throw "Cannot load Url";
-                                                    }}
-                                                 ),
-                                                ]
+                                              child: RichText(
+                                                  text:TextSpan(
+                                                      children:[
+                                                        TextSpan(
+                                                            text: snapshot.data['redeSoc']['face'],
+                                                            style:  TextStyle(
+                                                                decorationColor: Color(0xFFFFB54B),
+                                                                fontSize: (MediaQuery.of(context).size.height)*0.0234375,
+                                                                fontFamily: "Roboto",
+                                                                fontStyle: FontStyle.normal,
+                                                                color: Color(0xFFFFB54B),
+                                                                fontWeight: FontWeight.w900),
+                                                            recognizer: TapGestureRecognizer()..onTap = () async {
+                                                              var url = "https://www.facebook.com/PatoBurguer1";
+                                                              if (await canLaunch (url)){
+                                                                await launch(url);
+                                                              }else{
+                                                                throw "Cannot load Url";
+                                                              }}
+                                                        ),
+                                                      ]
+                                                  )
                                               )
-                                            )
                                           ),
                                         ]),
                                   ),
@@ -456,24 +456,24 @@ class _ContatoPage extends State<ContatoPage> {
                                             width: (MediaQuery.of(context).size.width)*0.0083,
                                           ),
                                           Container(
-                                            child: RichText(text: TextSpan(
-                                              text: snapshot.data['redeSoc']['insta'],
-                                              style: new TextStyle(
-                                                  decoration: TextDecoration.underline,
-                                                  decorationColor: Color(0xFFFFB54B),
-                                                  fontSize: (MediaQuery.of(context).size.height)*0.0234375,
-                                                  fontFamily: "Roboto",
-                                                  fontStyle: FontStyle.normal,
-                                                  color: Color(0xFFFFB54B),
-                                                  fontWeight: FontWeight.w900),
-                                                recognizer: TapGestureRecognizer()..onTap = () async {
-                                                  var url_2 = "https://instagram.com/patoburguer_?utm_medium=copy_link";
-                                                  if (await canLaunch(url_2)){
-                                                    await launch(url_2);
-                                                  }else{
-                                                    throw "Cannot load Url";
-                                                  }}
-                                            ),)
+                                              child: RichText(text: TextSpan(
+                                                  text: snapshot.data['redeSoc']['insta'],
+                                                  style: new TextStyle(
+
+                                                      decorationColor: Color(0xFFFFB54B),
+                                                      fontSize: (MediaQuery.of(context).size.height)*0.0234375,
+                                                      fontFamily: "Roboto",
+                                                      fontStyle: FontStyle.normal,
+                                                      color: Color(0xFFFFB54B),
+                                                      fontWeight: FontWeight.w900),
+                                                  recognizer: TapGestureRecognizer()..onTap = () async {
+                                                    var url_2 = "https://instagram.com/patoburguer_?utm_medium=copy_link";
+                                                    if (await canLaunch(url_2)){
+                                                      await launch(url_2);
+                                                    }else{
+                                                      throw "Cannot load Url";
+                                                    }}
+                                              ),)
                                           )
                                         ]),
                                   ),
@@ -485,16 +485,17 @@ class _ContatoPage extends State<ContatoPage> {
                           )
                         ],
                       ),
+                    ),
 
-                    ],
-                  );
-                  default:
-                    return Text('default');
-              }
+                  ],
+                );
+              default:
+                return Text('default');
             }
-        ),
-      );
-    
+          }
+      ),
+    );
+
   }
 }
 
@@ -505,4 +506,3 @@ getData() async{
       .get();
   return a.data();
 }
-
