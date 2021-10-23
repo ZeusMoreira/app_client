@@ -1,6 +1,6 @@
 # App_Cliente
 
-O App_cliente foi um projeto em que fizemos um aplicativo que permite os clientes da hamburgueria Pato Burguer acessar um cardápio virtual que possui filtro dos produtos, promoções e muito mais.  
+O [App_cliente](https://github.com/ZeusMoreira/app_client) foi um projeto em que fizemos um aplicativo que permite os clientes da hamburgueria Pato Burguer acessar um cardápio virtual que possui filtro dos produtos, promoções e muito mais.  
 
 O projeto foi idealizado pela equipe da empresa [**Mega JR**](http://www.megajunior.com.br/) em seu processo seletivo.  
 
